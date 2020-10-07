@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "txdmt.jwt",
+      "type": "com.learn.Utils.JwtUtil",
+      "sourceType": "com.learn.Utils.JwtUtil"
+    }
+  ],
+  "properties": [
+    {
+      "name": "txdmt.jwt.expire",
+      "type": "java.lang.Long",
+      "sourceType": "com.learn.Utils.JwtUtil",
+      "defaultValue": 0
+    },
+    {
+      "name": "txdmt.jwt.header",
+      "type": "java.lang.String",
+      "sourceType": "com.learn.Utils.JwtUtil"
+    },
+    {
+      "name": "txdmt.jwt.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.learn.Utils.JwtUtil"
+    }
+  ],
+  "hints": []
+}

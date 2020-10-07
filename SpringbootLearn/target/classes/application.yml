@@ -1,0 +1,20 @@
+server:
+  port: 8088
+
+Spring:
+  resources:
+    static-locations: classpath:/
+  datasource:
+    username: root
+    password: 30157325
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring?serverTimezone=UTC
+mybatis:
+  type-aliases-package: com.learn.Services
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+txdmt:
+  jwt:
+    secret: c5e8e3956145db4b23e8ca32d35eb450
+    expire: 604800
+    header: Authorization

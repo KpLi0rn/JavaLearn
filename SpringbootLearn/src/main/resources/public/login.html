@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<!--    路径错误导致没有正确引入jquery-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <div id="main">
+        <div class="form">
+            <div class="form-head">
+                <h2>登录</h2>
+                <p>还没有账号？<a href="register.html">立即注册</a></p>
+            </div>
+            <div class="form-body">
+                <div class="ui-input">
+                    <input id="user" class="abc" type="text" placeholder="用户名" name="username">
+                </div>
+                <div class="ui-input">
+                    <input id="passwd" type="text" placeholder="密码" name="password">
+                </div>
+                <p class="forget-password">
+                    <a href="">忘记密码？</a>
+                </p>
+                <input type="button" value="post请求" class="post">
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var app = new Vue({
+            el:".form-body",
+            data:{
+                methods: {
+                    axios.post("")
+                }
+            }
+        })
+        document.querySelector(".post").onclick = function () {
+            axios.post("http://localhost:8088/login",{"username":"admin","password":"admin"})
+            .then(function (response){
+                console.log(response);
+            })
+        }
+    </script>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
